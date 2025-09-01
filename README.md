@@ -10,7 +10,62 @@
 
 
 
-1. ## 3sum
+1. ## 2sum
+
+Given an array of integers, nums, and a target integer target, return the indices of the two numbers that add up to the target. Each
+input will have exactly one solution, and you can't use the same element twice.
+
+## Problem link:
+LeetCode: [2sum](https://leetcode.com/problems/2sum)
+
+## Thought Process:
+- Sort the array first (to help skip duplicates and use two pointers).
+- For each number in the array:
+- Fix it as a.
+- Use two pointers (left and right) to find pairs in the rest of the array that sum to -a (so total sum is zero).
+- Move pointers inward, skipping duplicates.
+
+## Brute-force Approach:
+- Sort the array.
+- Iterate i from 0 to n-3:
+- If i > 0 and nums[i] == nums[i-1], continue (skip duplicate triplets).
+- Set left = i + 1, right = nums.length - 1.
+- While left < right:
+- Compute total = nums[i] + nums[left] + nums[right].
+- If total == 0:
+- Add triplet to result.
+- Move left/right to next unique numbers.
+- If total < 0, move left pointer right.
+- If total > 0, move right pointer left.
+
+## Time and Space Complexity
+- Time Complexity: O(n), since we traverse the array once and hash map operations are O(1).
+- Space Complexity: O(n), for storing up to n elements in the map.
+
+## JavaScript Solution
+
+ ```
+ sort(nums)
+result = []
+for i from 0 to nums.length - 3:
+if i > 0 and nums[i] == nums[i-1]: continue
+left = i + 1
+right = nums.length - 1
+while left < right:
+sum = nums[i] + nums[left] + nums[right]
+if sum == 0:
+add [nums[i], nums[left], nums[right]] to result
+move left and right to skip duplicates
+else if sum < 0:
+left += 1
+else:
+right -= 1
+return result
+``` 
+
+**[⬆ Back to Top](#table-of-contents)**
+
+2. ## 3sum
 
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
