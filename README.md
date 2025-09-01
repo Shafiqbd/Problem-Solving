@@ -43,7 +43,8 @@ LeetCode: [3sum](https://leetcode.com/problems/3sum)
 
 ## JavaScript Solution
 
-```sort(nums)
+ ```
+ sort(nums)
 result = []
 for i from 0 to nums.length - 3:
 if i > 0 and nums[i] == nums[i-1]: continue
@@ -58,6 +59,7 @@ else if sum < 0:
 left += 1
 else:
 right -= 1
-return result```
+return result
+``` 
 
 **[⬆ Back to Top](#table-of-contents)**
