@@ -4,13 +4,13 @@
 | No. | Problems |
 | --- | --------- |
 |   | **Core React** |
-|1  | [2sum?](#2sum) |
-|2  | [3sum](#3sum) |
-|3  | [4sum](#4sum) |
+|1  | [2sum-leetcode](#2sum) |
+|2  | [3sum-leetcode](#3sum) |
+|3  | [4sum-leetcode](#4sum) |
 
 
 
-## 1. 3sum
+1. ## 3sum
 
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 
@@ -59,3 +59,5 @@ left += 1
 else:
 right -= 1
 return result```
+
+**[⬆ Back to Top](#table-of-contents)**
