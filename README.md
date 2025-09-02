@@ -9,8 +9,8 @@
 
 1. ## Sorting Array
 
-Given an array of integers, nums sorting the array without using any build in fuction.
-Input: [-1, 0, 1, 2, -1, -4]
+Given an array of integers, nums sorting the array without using any build in fuction.<br>
+Input: [-1, 0, 1, 2, -1, -4] <br>
 Output: [-4, -1, -1, 0, 1, 2]
 
 ## Thought Process:
