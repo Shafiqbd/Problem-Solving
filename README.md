@@ -1,11 +1,11 @@
 ### Table of Contents
 
-| No. | Problems       |
-| --- | -------------- |
-|     | **Core React** |
-| 1   | [2sum](#2sum)  |
-| 2   | [3sum](#3sum)  |
-| 3   | [4sum](#4sum)  |
+| No. | Problems                        |
+| --- | ------------------------------- |
+| 1   | [Sorting Array](#sorting-array) |
+| 2   | [2sum](#2sum)                   |
+| 3   | [3sum](#3sum)                   |
+| 4   | [4sum](#4sum)                   |
 
 1. ## Sorting Array
 
@@ -127,7 +127,7 @@ var twoSum = function(nums, target) {
 
 **[⬆ Back to Top](#table-of-contents)**
 
-2. ## 3sum
+3. ## 3sum
 
 Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
 Input: nums = [-1,0,1,2,-1,-4]
