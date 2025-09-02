@@ -49,12 +49,27 @@ for i = 0 to n-1
 quicksort(arr):
    if length(arr) <= 1 return arr
 
-   pivot = arr[last]   // bad choice if sorted
+   pivot = arr[last]
    left = elements < pivot
    right = elements >= pivot
 
    return quicksort(left) + pivot + quicksort(right)
 
+
+```
+
+```
+Visualization: [5, 3, 8, 4, 2]
+
+Pick pivot=2
+[5,3,8,4] | 2 | []
+          ↓
+Sort left: []            Sort right: [5,3,8,4]
+                         Pivot=4
+                         [3] | 4 | [5,8]
+
+Final result:
+[2] + [3,4,5,8] → [2,3,4,5,8]
 
 ```
 
@@ -66,15 +81,35 @@ quicksort(arr):
 ## JavaScript Solution
 
 ```
-var twoSum = function(nums, target) {
- const map = new Map();
- for(let i=0; i<nums.length; i++){
-   let temp = target - nums[i];
-   if(map.has(temp)){
-       return [map.get(temp),i];
-   }
-   map.set(nums[i],i)
- }
+const bubbleSort = function (nums) {
+  let n = nums.length;
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+      if (nums[j] > nums[j + 1]) {
+        let temp = nums[j];
+        nums[j] = nums[j + 1];
+        nums[j + 1] = temp;
+      }
+    }
+  }
+  return nums;
+};
+
+const quickSort = function (nums) {
+  let n = nums.length;
+  if (n <= 1) return nums;
+  let pivot = nums[n - 1];
+  let left = [];
+  let right = [];
+  for (let i = 0; i < n - 1; i++) {
+    if (nums[i] < pivot) {
+      left.push(nums[i]);
+    } else {
+      right.push(nums[i]);
+    }
+  }
+
+  return [...quickSort(left), pivot, ...quickSort(right)];
 };
 ```
 
